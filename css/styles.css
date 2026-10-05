@@ -1,0 +1,243 @@
+/* ==========================================================================
+   PALETA DE COLORES
+   ========================================================================== */
+:root {
+    --color-azul-pizarra: #1e2433;      /* Navbar y Footer de alto contraste */
+    --color-texto-principal: #2a2228;   /* Títulos oscuros y legibles */
+    --color-texto-cuerpo: #52474c;      /* Texto de párrafos claro y nítido */
+    
+    /* ACENTOS VIBRANTES (Saturados para llamar la atención) */
+    --color-acento-vibrante: #b85062;   /* Magenta/Rosado saturado para botones principales */
+    --color-acento-hover: #9c3b4d;      /* Estado hover profundo */
+    --color-acento-secundario: #d99379; /* Terracota/Cálido para badges y detalles */
+    
+    --color-fondo-base: #faf6f4;        /* Fondo base claro warm-light */
+    --color-fondo-card: #ffffff;        /* Blanco puro para hacer destacar las tarjetas */
+    --color-borde-suave: #e8dbd5;       /* Bordes definidos pero suaves */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* FONDO GENERAL Y TIPOGRAFÍA */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--color-fondo-base) !important;
+    color: var(--color-texto-principal) !important;
+}
+
+/*  NAVBAR EN AZUL PIZARRA DE ALTO CONTRASTE */
+.navbar-logo {
+height: 60px; 
+  width: auto;
+  object-fit: contain;
+}
+.navbar-custom {
+    background-color: var(--color-azul-pizarra) !important;
+    border-bottom: 3px solid var(--color-acento-vibrante);
+    box-shadow: 0 4px 20px rgba(30, 36, 51, 0.15);
+    z-index: 1030 !important;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffffff !important;
+}
+
+.navbar-custom .nav-link {
+    color: #d1d5db !important;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover, 
+.navbar-custom .nav-link.active {
+    color: var(--color-acento-secundario) !important;
+}
+
+/*  HERO SECTION / INICIO */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top right, #ffffff 0%, var(--color-fondo-base) 100%);
+}
+
+.hero-section h1 {
+    color: var(--color-texto-principal) !important;
+    letter-spacing: -0.5px;
+}
+
+.hero-section p {
+    color: var(--color-texto-cuerpo) !important;
+}
+
+.bg-light {
+    background-color: #f2e9e4 !important;
+}
+
+.badge-role {
+    background-color: rgba(184, 80, 98, 0.12) !important;
+    color: var(--color-acento-vibrante) !important;
+    border: 1.5px solid var(--color-acento-vibrante) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* BOTÓN PRINCIPAL LLAMATIVO Y REBOTANTE */
+.btn-verde-acento {
+    background-color: var(--color-acento-vibrante) !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    border: none !important;
+    border-radius: 10px;
+    padding: 0.7rem 1.8rem;
+    box-shadow: 0 4px 15px rgba(184, 80, 98, 0.35);
+    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-verde-acento:hover {
+    background-color: var(--color-acento-hover) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.03) !important;
+    box-shadow: 0 8px 25px rgba(184, 80, 98, 0.5) !important;
+}
+
+.btn-verde-acento:active {
+    transform: scale(0.94) translateY(2px) !important;
+}
+
+.btn-outline-dark {
+    color: var(--color-texto-principal) !important;
+    border: 2px solid var(--color-texto-principal) !important;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-texto-principal) !important;
+    color: #ffffff !important;
+}
+
+/*  HABILIDADES TÉCNICAS (BADGES CON ESTILO ELEGANTE) */
+.badge-skill {
+    background-color: var(--color-azul-pizarra) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    display: inline-block;
+    border-bottom: 3px solid var(--color-acento-secundario);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.badge-skill:hover {
+    transform: translateY(-3px);
+    border-bottom-color: var(--color-acento-vibrante);
+}
+
+/*  CARDS DE PROYECTOS (ESTILO FLOTANTE CON BRILLO) */
+.custom-card {
+    background-color: var(--color-fondo-card) !important;
+    border: 1.5px solid var(--color-borde-suave) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.custom-card .card-title {
+    color: var(--color-texto-principal) !important;
+}
+
+.custom-card .card-text {
+    color: var(--color-texto-cuerpo) !important;
+}
+
+.custom-card:hover {
+    transform: translateY(-7px) !important;
+    border-color: var(--color-acento-vibrante) !important;
+    box-shadow: 0 12px 30px rgba(184, 80, 98, 0.18) !important;
+}
+
+.tech-badge-sm {
+    background-color: var(--color-acento-secundario);
+    color: #ffffff;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    padding: 0.3rem 0.7rem;
+    font-weight: 600;
+}
+
+/* FORMULARIO DE CONTACTO */
+.form-control {
+    background-color: #ffffff !important;
+    border: 1.5px solid var(--color-borde-suave) !important;
+    color: var(--color-texto-principal) !important;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: var(--color-acento-vibrante) !important;
+    box-shadow: 0 0 0 0.25rem rgba(184, 80, 98, 0.2) !important;
+}
+
+/*  FOOTER EN AZUL PIZARRA */
+footer {
+    background-color: var(--color-azul-pizarra) !important;
+    color: #d1d5db !important;
+    border-top: 3px solid var(--color-acento-vibrante);
+}
+
+/* ==========================================================================
+   ESTILOS PARA REDES SOCIALES Y CONTACTO
+   ========================================================================== */
+
+/* ÍCONOS FLOTANTES EN EL HERO */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    color: var(--color-texto-principal);
+    border: 1.5px solid var(--color-borde-suave);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                background-color 0.2s ease, 
+                color 0.2s ease, 
+                border-color 0.2s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-acento-vibrante);
+    color: #ffffff !important;
+    border-color: var(--color-acento-vibrante);
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 6px 15px rgba(184, 80, 98, 0.35);
+}
+
+/* ENLACES EN LA SECCIÓN DE CONTACTO */
+.contact-link {
+    color: var(--color-texto-principal);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid var(--color-borde-suave);
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-link:hover {
+    color: var(--color-acento-vibrante);
+    border-color: var(--color-acento-vibrante);
+    transform: translateY(-2px);
+}
