@@ -28,11 +28,11 @@ body {
     color: var(--color-texto-principal) !important;
 }
 
-/*  NAVBAR EN AZUL PIZARRA DE ALTO CONTRASTE */
+/* NAVBAR EN AZUL PIZARRA DE ALTO CONTRASTE */
 .navbar-logo {
-height: 60px; 
-  width: auto;
-  object-fit: contain;
+    height: 60px; 
+    width: auto;
+    object-fit: contain;
 }
 .navbar-custom {
     background-color: var(--color-azul-pizarra) !important;
@@ -56,7 +56,7 @@ height: 60px;
     color: var(--color-acento-secundario) !important;
 }
 
-/*  HERO SECTION / INICIO */
+/* HERO SECTION / INICIO */
 .hero-section {
     min-height: 80vh;
     display: flex;
@@ -114,14 +114,17 @@ height: 60px;
     border: 2px solid var(--color-texto-principal) !important;
     font-weight: 600;
     border-radius: 10px;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.2s ease;
 }
 
 .btn-outline-dark:hover {
     background-color: var(--color-texto-principal) !important;
     color: #ffffff !important;
+    transform: translateY(-2px);
 }
 
-/*  HABILIDADES TÉCNICAS (BADGES CON ESTILO ELEGANTE) */
+/* HABILIDADES TÉCNICAS (BADGES CON ESTILO ELEGANTE) */
 .badge-skill {
     background-color: var(--color-azul-pizarra) !important;
     color: #ffffff !important;
@@ -140,7 +143,7 @@ height: 60px;
     border-bottom-color: var(--color-acento-vibrante);
 }
 
-/*  CARDS DE PROYECTOS (ESTILO FLOTANTE CON BRILLO) */
+/* CARDS DE PROYECTOS (ESTILO FLOTANTE CON BRILLO) */
 .custom-card {
     background-color: var(--color-fondo-card) !important;
     border: 1.5px solid var(--color-borde-suave) !important;
@@ -185,7 +188,7 @@ height: 60px;
     box-shadow: 0 0 0 0.25rem rgba(184, 80, 98, 0.2) !important;
 }
 
-/*  FOOTER EN AZUL PIZARRA */
+/* FOOTER EN AZUL PIZARRA */
 footer {
     background-color: var(--color-azul-pizarra) !important;
     color: #d1d5db !important;
@@ -240,4 +243,14 @@ footer {
     color: var(--color-acento-vibrante);
     border-color: var(--color-acento-vibrante);
     transform: translateY(-2px);
+}
+
+/* Ajuste de altura fija y proporciones para videos e imágenes dentro de las tarjetas */
+.custom-card video,
+.custom-card img {
+    width: 100%;
+    height: 200px; /* Altura fija uniforme para todas las tarjetas */
+    object-fit: cover; /* Recorta la imagen/video proporcionalmente para llenar la tarjeta sin deformarse */
+    border-radius: 10px; /* Bordes redondeados consistentes */
+    display: block;
 }
